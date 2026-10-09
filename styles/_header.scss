@@ -1,0 +1,25 @@
+@use 'colors';
+
+.header {
+    @extend %container;
+    @extend %flex-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__logo img {
+        width: auto;
+        height: 20px;
+    }
+
+    &__nav {
+        @extend %nav;
+    }
+
+    &__link {
+        @extend %link;
+
+        &:hover {
+            color: colors.$accent;
+        }
+    }
+}
