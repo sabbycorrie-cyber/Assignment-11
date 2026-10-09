@@ -1,0 +1,46 @@
+@use 'fonts';
+@use 'colors';
+
+.contact {
+    @extend %section;
+    @include columns(1fr 1fr);
+
+    &__title {
+        @extend %page-title;
+    }
+
+    &__paragraph {
+        @extend %small-text;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-size: fonts.$font-xsmall;
+        color: colors.$muted;
+    }
+
+    &__input {
+        border: none;
+        border-bottom: 1px solid colors.$border;
+        padding: 10px 0;
+        margin-bottom: 20px;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: colors.$accent;
+        }
+    }
+
+    &__button {
+        align-self: flex-start;
+        background: colors.$accent;
+        color: colors.$white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+}
