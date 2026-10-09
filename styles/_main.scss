@@ -1,0 +1,48 @@
+@use 'fonts';
+@use 'colors';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: fonts.$main-font;
+    color: colors.$text;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+.main {
+    @extend %container;
+}
+
+@import 'home';
+@import 'project';
+@import 'contact';
