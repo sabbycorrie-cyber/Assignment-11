@@ -38,6 +38,7 @@ $page-padding: 24px;
 %link {
     color: colors.$text;
     font-size: fonts.$font-normal;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -48,9 +49,16 @@ $page-padding: 24px;
 }
 
 %page-title {
-    font-size: fonts.$font-large;
+    max-width: 450px;
+    font-size: fonts.$font-xlarge;
     line-height: 1.3;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+}
+
+%body-text {
+    font-size: fonts.$font-body;
+    color: colors.$body;
+    line-height: 1.75;
 }
 
 %section {

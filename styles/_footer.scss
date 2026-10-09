@@ -3,6 +3,7 @@
 .footer {
     @extend %container;
     @extend %flex-between;
+    gap: 88px;
     margin-top: 80px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -15,6 +16,7 @@
 
     &__nav {
         @extend %nav;
+        margin-left: auto;
     }
 
     &__link {
@@ -22,6 +24,20 @@
 
         &:hover {
             color: colors.$muted;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 24px;
+
+        img {
+            width: auto;
+            height: 15px;
+        }
+
+        a:hover {
+            opacity: 0.6;
         }
     }
 }

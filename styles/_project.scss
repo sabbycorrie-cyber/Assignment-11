@@ -3,25 +3,27 @@
 
 .intro {
     @extend %section;
-    @include columns(2fr 1fr);
+    @include columns(2fr 1fr, 120px);
 
     &__title {
         @extend %page-title;
     }
 
     &__paragraph {
-        @extend %small-text;
-        margin-bottom: 16px;
+        @extend %body-text;
+        margin-bottom: 20px;
     }
 
     &__row {
-        @extend %flex-between;
-        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 135px 1fr;
+        padding: 21px 0;
         border-bottom: 1px solid colors.$border;
-        font-size: fonts.$font-xsmall;
+        font-size: fonts.$font-normal;
 
         dt {
             color: colors.$muted;
+            font-weight: 600;
         }
 
         dd {
@@ -37,7 +39,7 @@
     }
 
     &__text {
-        @extend %small-text;
+        @extend %body-text;
     }
 
     &__images {
