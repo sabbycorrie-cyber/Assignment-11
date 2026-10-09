@@ -1,0 +1,27 @@
+@use 'colors';
+
+.footer {
+    @extend %container;
+    @extend %flex-between;
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid colors.$border;
+
+    &__logo {
+        @extend %link;
+        font-weight: 700;
+    }
+
+    &__nav {
+        @extend %nav;
+    }
+
+    &__link {
+        @extend %link;
+
+        &:hover {
+            color: colors.$muted;
+        }
+    }
+}
