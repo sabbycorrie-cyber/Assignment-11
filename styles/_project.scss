@@ -1,0 +1,52 @@
+@use 'fonts';
+@use 'colors';
+
+.intro {
+    @extend %section;
+    @include columns(2fr 1fr);
+
+    &__title {
+        @extend %page-title;
+    }
+
+    &__paragraph {
+        @extend %small-text;
+        margin-bottom: 16px;
+    }
+
+    &__row {
+        @extend %flex-between;
+        padding: 10px 0;
+        border-bottom: 1px solid colors.$border;
+        font-size: fonts.$font-xsmall;
+
+        dt {
+            color: colors.$muted;
+        }
+
+        dd {
+            font-weight: 700;
+        }
+    }
+}
+
+.project {
+    &__hero,
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        @extend %small-text;
+    }
+
+    &__images {
+        @include columns(repeat(3, 1fr), 24px);
+
+        img {
+            @extend %image-hover;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
